@@ -6,10 +6,10 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   document.querySelector("#excuse").innerHTML = generateExcuse();
-  console.log("Hello Rigo from the console!");
+  console.log("GDE");
 };
 
-let generateExcuse = () => {
+function generateExcuse() {
   let who = ["The dog", "My grandma", "The mailman", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "my phone", "the car"];
@@ -26,7 +26,7 @@ let generateExcuse = () => {
   let whatIndex = Math.floor(Math.random() * what.length);
   let whenIndex = Math.floor(Math.random() * when.length);
 
-  return (
+  let excuse =
     who[whoIndex] +
     " " +
     action[actionIndex] +
@@ -34,6 +34,7 @@ let generateExcuse = () => {
     what[whatIndex] +
     " " +
     when[whenIndex] +
-    " "
-  );
-};
+    " ";
+
+  return excuse;
+}
